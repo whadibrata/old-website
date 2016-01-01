@@ -298,4 +298,34 @@
   height: 200px;
   width: 100%;
   background: $foocolor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  position: relative;
+  opacity: 1;
+  cursor: pointer;
+  @include transition(all 300ms);
+
+  img {
+    @include size(30px);
+    float: left;
+  }
+
+  h4 {
+    color: #fff;
+    float: left;
+    margin: 0;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
