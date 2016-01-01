@@ -1,0 +1,43 @@
+html{
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  height: 100vh;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.wht-section,
+.alt-section{
+  position: relative;
+  width: 100%;
+  padding: 50px 15px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.alt-section{
+  background: $sectcolor;
+
+}

@@ -1,0 +1,378 @@
+// -----------
+// -- ABOUT--
+// -----------
+
+.about {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-title {
+  padding-top: 70px;
+  height: 300px;
+  background: url(../img/notes-section.svg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //background: #f8f8f8;
+  border-bottom: 2px solid #eee;
+
+  h4 {
+    margin: 0;
+    font-size: 28px;
+  }
+}
+
+// -----------
+// -- EDUCATION --
+// -----------
+.timeline_row {
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+  opacity: 0;
+
+  &.is-shown {
+    opacity: 1;
+    animation: downbounce 1500ms linear both;
+  }
+}
+
+.timeline_pointer,
+.timeline_pointer_even {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline_year,
+.timeline_year_even {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: splat 2000ms linear;
+}
+
+.timeline_school,
+.timeline_school_even {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pointer,
+.pointer_even {
+  position: relative;
+  @include size(40px);
+  background: $fav url(../img/education.svg) no-repeat center;
+  background-size: 25px 25px;
+  border-radius: 50%;
+}
+
+.year,
+.year_even {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  background: $fav;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  &::before {
+    content: '';
+    @include position(absolute, null 0 100% 0);
+    @include triangle(20px, $fav, up);
+    margin: 0 auto;
+  }
+}
+
+.school,
+.school_even {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  color: $dark;
+  font-weight: 500;
+  line-height: 30px;
+  background: #f8f8f8;
+
+  span {
+    color: $grey;
+    font-weight: 300;
+  }
+}
+
+//Tablet
+@include media($tablet) {
+  .timeline_row {
+    flex-direction: row;
+    margin: 0;
+    padding: 30px 0;
+  }
+
+  .timeline_pointer,
+  .timeline_pointer_even {
+    width: 40px;
+    order: 1;
+  }
+
+  .timeline_year,
+  .timeline_year_even {
+    width: auto;
+    order: 2;
+  }
+
+  .timeline_school,
+  .timeline_school_even {
+    width: auto;
+    order: 3;
+  }
+
+  .pointer,
+  .pointer_even {
+    &::before {
+      content: '';
+      @include position(absolute, null 0 50px 0);
+      margin-right: auto;
+      margin-left: auto;
+      @include size(10px 100px);
+      background: url(../img/pointer_up.svg) no-repeat 50% 100%;
+    }
+
+    &::after {
+      content: '';
+      @include position(absolute, 50px 0 null 0);
+      margin-right: auto;
+      margin-left: auto;
+      @include size(10px 100px);
+      background: url(../img/pointer_down.svg) no-repeat 50% 0;
+    }
+  }
+
+  .year,
+  .year_even {
+    margin: 0;
+    margin-left: 30px;
+    width: auto;
+    padding: 20px;
+    border-left: 5px solid $favdark;
+
+    &::before {
+      content: '';
+      @include position(absolute, 0 null 0 -25px);
+      @include triangle(20px, $favdark, left);
+      margin: auto 0;
+    }
+  }
+
+  .school,
+  .school_even {
+    width: auto;
+    text-align: left;
+    margin-left: 30px;
+    background: none;
+  }
+}
+
+//PC
+@include media($pc) {
+  .timeline_row {
+    padding: 30px 0;
+  }
+
+  .timeline_pointer,
+  .timeline_pointer_even {
+    order: 2;
+    flex-basis: 10%;
+  }
+
+  .timeline_year,
+  .timeline_year_even {
+    flex-basis: 45%;
+  }
+
+  .timeline_year {
+    order: 3;
+    justify-content: flex-start;
+  }
+
+  .timeline_year_even {
+    order: 1;
+    justify-content: flex-end;
+  }
+
+  .timeline_school,
+  .timeline_school_even {
+    flex-basis: 45%;
+  }
+
+  .timeline_school {
+    order: 1;
+    justify-content: flex-end;
+  }
+
+  .timeline_school_even {
+    order: 3;
+    justify-content: flex-start;
+  }
+
+  .year {
+
+  }
+
+  .year_even {
+    border-left: none;
+    border-right: 5px solid $favdark;
+    margin-right: 30px;
+
+    &::before {
+      @include triangle(0, $favdark, left);
+    }
+
+    &::after {
+      content: '';
+      @include position(absolute, 0 -15px 0 null);
+      @include triangle(20px, $favdark, right);
+      margin: auto 0;
+    }
+  }
+
+  .school {
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .school_even {
+
+  }
+}
+
+// -----------
+// -- EXPERIENCE --
+// -----------
+.experience-title {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.experience-unit {
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px 20px;
+  margin: 20px 0;
+
+  h3,
+  h5,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    span {
+      padding-left: 10px;
+      margin-left: 10px;
+      border-left: 1px solid $fav;
+    }
+  }
+}
+
+@include media($pc) {
+  .experience-unit {
+    max-width: 960px;
+    padding: 35px;
+  }
+}
+
+// -----------
+// -- SKILLS --
+// -----------
+.skills-title {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.skills-unit {
+  position: relative;
+  background: $sectcolor;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin: 10px;
+  width: max-content;
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  span {
+    display: inline-block;
+    @include size(10px);
+    border-radius: 50% 50% 0 50%;
+    background: $grey;
+    margin: 0 2px;
+    border: 1px solid $grey;
+  }
+
+  @for $i from 1 through 10 {
+    &.skills-#{$i} span:nth-child(n + #{$i + 2}) {
+      @extend %skills-color;
+    }
+  }
+}
+
+%skills-color {
+  background: #fff;
+}
+
+//PC
+@include media($pc) {
+  .skills-container {
+    max-width: 960px;
+  }
+}

@@ -1,0 +1,12 @@
+// -- Tools --
+@import "1-tools/bourbon/bourbon";
+@import "1-tools/grid-settings";
+@import "1-tools/neat/neat";
+@import "1-tools/vars";
+
+
+// -- Main file --
+@import "4-pages/main";
+@import "4-pages/about";
+@import "4-pages/notes";
+@import "4-pages/contact";

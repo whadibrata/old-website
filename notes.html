@@ -1,0 +1,46 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  <!-- particles -->
+
+  <!-- navigation -->
+
+  {% include header.html %}
+
+  <!-- hero -->
+
+  <section class="notes">
+    <div class="notes-title">
+      <h4>.notes</h4>
+    </div>
+
+    {% for post in site.posts %}
+
+      <div class="notes-unit">
+        <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
+        <a href="{{ post.url}}"><h4>{{ post.title }}</h4></a>
+        <p>{{ post.excerpt }}</p>
+      </div>
+
+    {% endfor %}
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="site-footer">
+
+  </footer>
+
+  <script src="assets/js/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/functiononnotes.js" type="text/javascript"></script>
+</body>
+
+</html>

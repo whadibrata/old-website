@@ -1,0 +1,3 @@
+@mixin col($column) {
+  width: $column / 12 * 100%;
+}

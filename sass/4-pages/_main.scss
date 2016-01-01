@@ -1,0 +1,98 @@
+// -----------
+// -- Hero-BG --
+// -----------
+#hero-bg {
+  @include position(absolute, 0 null null 0);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/hero-bg.svg) no-repeat center;
+  background-size: cover;
+
+  //background: #f8f8f8;
+}
+
+// -----------
+// -- HERO --
+// -----------
+.hero {
+  display: block;
+  position: relative;
+  padding-top: 70px;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  //background: #eee;
+}
+
+.hero {
+  h4 {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+  }
+
+  a{
+    position: relative;
+    display: block;
+  }
+
+  span {
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: '';
+      @include position(absolute, null 0 -5px 0);
+      @include size(0 2px);
+      background: $fav;
+      @include transition(all 300ms);
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.learn-more{
+  position: relative;
+  color: $dark;
+  margin-top: 30px;
+  font-weight: 400;
+  padding: 15px 30px;
+  background: #fff;
+  @include transition(all 300ms);
+
+  &:hover{
+    background: #eee;
+    color: $dark;
+    opacity: 0.8;
+  }
+
+  span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    @include size(10px);
+    background: url(../img/arrow.svg) no-repeat center;
+  }
+}
+
+@include media($pc) {
+  .hero {
+    h4 {
+      font-size: 20px;
+      max-width: 760px;
+    }
+  }
+}
