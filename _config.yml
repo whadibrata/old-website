@@ -1,2 +1,2 @@
 # Build settings
-markdown: commonmark
+markdown: kramdown
