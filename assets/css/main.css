@@ -503,9 +503,9 @@ html {
 
 .skills-unit {
   position: relative;
-  background: #f8f8f8;
   border-radius: 5px;
-  padding: 20px 30px;
+  border-bottom: 2px solid #A5939F;
+  padding: 5px 10px 10px;
   margin: 10px;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -537,6 +537,12 @@ html {
 @media screen and (min-width: 768px) {
   .skills-container {
     max-width: 960px;
+  }
+  .skills-unit {
+    background: #f8f8f8;
+    border-bottom: none;
+    padding: 20px 30px;
+    margin: 10px;
   }
   .skills-unit h3 {
     font-size: 16px;

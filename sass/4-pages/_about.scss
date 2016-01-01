@@ -318,9 +318,10 @@
 
 .skills-unit {
   position: relative;
-  background: $sectcolor;
+  //background: $sectcolor;
   border-radius: 5px;
-  padding: 20px 30px;
+  border-bottom: 2px solid $grey;
+  padding: 5px 10px 10px;
   margin: 10px;
   width: max-content;
 
@@ -359,6 +360,10 @@
   }
 
   .skills-unit{
+    background: $sectcolor;
+    border-bottom: none;
+    padding: 20px 30px;
+    margin: 10px;
     h3{
       font-size: 16px;
     }
