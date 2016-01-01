@@ -22,10 +22,12 @@
   margin-bottom: 20px;
   flex-direction: column;
   opacity: 0;
+  @include transition(all 500ms);
+  transform: translateY(50px);
 
   &.is-shown {
     opacity: 1;
-    animation: downbounce 1500ms linear both;
+    transform: translateY(0);
   }
 }
 
@@ -41,7 +43,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: splat 2000ms linear;
 }
 
 .timeline_school,

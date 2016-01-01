@@ -132,12 +132,17 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 0;
+  transition: all 500ms;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
 }
 
 .timeline_row.is-shown {
   opacity: 1;
-  -webkit-animation: downbounce 1500ms linear both;
-          animation: downbounce 1500ms linear both;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .timeline_pointer,
@@ -160,8 +165,6 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: splat 2000ms linear;
-          animation: splat 2000ms linear;
 }
 
 .timeline_school,

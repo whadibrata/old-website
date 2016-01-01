@@ -81,7 +81,7 @@ function education() {
       eduRow = $(".timeline_row");
 
     eduRow.each(function(i) {
-      if (scroll > (eduRow.eq(i).offset().top) - wHeight + ((i + 1) * eduRow.height() / 2)) {
+      if (scroll > (eduRow.eq(i).offset().top) - wHeight + ((i + 1) * eduRow.height() / 2) - 50) {
         eduRow.eq(i).addClass("is-shown");
       }
     });
