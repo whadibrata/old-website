@@ -266,6 +266,7 @@
   border-radius: 5px;
   padding: 30px 20px;
   margin: 20px 0;
+  border-bottom: 2px solid $grey;
 
   h3,
   h5,
@@ -361,7 +362,6 @@
 
   .skills-unit{
     background: $sectcolor;
-    border-bottom: none;
     padding: 20px 30px;
     margin: 10px;
     h3{

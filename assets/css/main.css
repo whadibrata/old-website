@@ -444,6 +444,7 @@ html {
   border-radius: 5px;
   padding: 30px 20px;
   margin: 20px 0;
+  border-bottom: 2px solid #A5939F;
 }
 
 .experience-unit h3,
@@ -540,7 +541,6 @@ html {
   }
   .skills-unit {
     background: #f8f8f8;
-    border-bottom: none;
     padding: 20px 30px;
     margin: 10px;
   }
