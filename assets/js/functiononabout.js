@@ -10,7 +10,7 @@
 
 function header() {
   var nav = $(".site-nav"),
-    notesTitle = $(".about-title");
+    notesTitle = $(".page-title");
 
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();

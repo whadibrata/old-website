@@ -1,16 +1,34 @@
-.section-title{
+.section-title {
   position: relative;
   font-weight: 500;
   margin: 0;
   margin-bottom: 30px;
-  //width: max-content;
 
-  &::after{
+  //width: max-content;
+  &::after {
     content: '';
-    @include position(absolute, null 0 -10px 0);
+    @include position(absolute, null 0 -15px 0);
     margin: 0 auto;
-    background: url("/assets/img/curly2.svg") repeat-x center;
+    background: url(/assets/img/curly2.svg) no-repeat center;
     width: 100%;
     height: 8px;
+  }
+}
+
+.page-title {
+  padding-top: 70px;
+  height: 300px;
+  background: url(../img/notes-section.svg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //background: #f8f8f8;
+  border-bottom: 2px solid #eee;
+
+  h4 {
+    margin: 0;
+    font-size: 28px;
   }
 }

@@ -1,27 +1,10 @@
 // -----------
 // -- NOTES--
 // -----------
-
 .notes {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-}
-
-.notes-title {
-  padding-top: 70px;
-  height: 300px;
-  background: url(../img/notes-section.svg) no-repeat center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid #eee;
-
-  h4 {
-    margin: 0;
-    font-size: 28px;
-  }
 }
 
 .notes-unit {

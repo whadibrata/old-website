@@ -296,12 +296,34 @@ body {
   content: '';
   position: absolute;
   right: 0;
-  bottom: -10px;
+  bottom: -15px;
   left: 0;
   margin: 0 auto;
-  background: url("/assets/img/curly2.svg") repeat-x center;
+  background: url(/assets/img/curly2.svg) no-repeat center;
   width: 100%;
   height: 8px;
+}
+
+.page-title {
+  padding-top: 70px;
+  height: 300px;
+  background: url(../img/notes-section.svg) no-repeat center;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid #eee;
+}
+
+.page-title h4 {
+  margin: 0;
+  font-size: 28px;
 }
 
 ::-moz-selection {
