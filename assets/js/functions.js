@@ -2,7 +2,7 @@
 
   menuMobile();
 
-  //header();
+  header();
 
   //particleBackground();
 
@@ -14,12 +14,13 @@
 })();
 
 function header() {
-  var nav = $(".nav_header");
+  var nav = $(".site-nav"),
+      notesTitle = $(".page-title");
 
   $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
 
-    if (scroll > nav.height()) {
+    if (scroll > (notesTitle.height() - nav.height()/2)) {
       nav.addClass("is-scrolled");
     } else {
       nav.removeClass("is-scrolled");
