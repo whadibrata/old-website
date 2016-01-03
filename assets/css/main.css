@@ -621,7 +621,12 @@ html {
 
 .notes-unit h5 {
   font-weight: 400;
+  font-size: 14px;
   margin-bottom: 10px;
+}
+
+.notes-unit h5 span {
+  color: #029aa8;
 }
 
 .notes-unit h4 {

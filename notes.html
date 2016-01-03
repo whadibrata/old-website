@@ -27,9 +27,11 @@
         <h5>{{ post.date | date: "%b %-d, %Y" }}</h5>
         <a href="{{ post.url}}"><h4>{{ post.title }}</h4></a>
         <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url}}"><h5><span>... more</span></h5></a>
       </div>
 
     {% endfor %}
+
 
   </section>
 
