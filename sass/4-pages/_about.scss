@@ -1,6 +1,30 @@
 // -----------
 // -- ABOUT--
 // -----------
+#about{
+  a{
+    position: relative;
+    color: $favdark;
+    @include transition(all 300ms);
+
+    &::after{
+      content: '';
+      @include position(absolute, null 0 -5px 0);
+      @include size(100% 2px);
+      background: $favdark;
+      margin: 0 auto;
+    }
+
+    &:hover{
+      color: $grey;
+
+      &::after{
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
 .about {
   position: relative;
   width: 100%;
@@ -291,6 +315,28 @@
       padding-left: 10px;
       margin-left: 10px;
       border-left: 1px solid $fav;
+    }
+  }
+
+  a{
+    position: relative;
+    color: $favdark;
+    @include transition(all 300ms);
+
+    &::after{
+      content: '';
+      @include position(absolute, null 0 -5px 0);
+      @include size(100% 2px);
+      background: $favdark;
+      margin: 0 auto;
+    }
+
+    &:hover{
+      color: $grey;
+
+      &::after{
+        opacity: 0.5;
+      }
     }
   }
 }
