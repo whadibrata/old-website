@@ -579,6 +579,50 @@ html {
 
 .notes-unit p {
   margin: 0;
+  margin-bottom: 20px;
+}
+
+.notes-unit blockquote {
+  position: relative;
+}
+
+.notes-unit blockquote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  height: 100%;
+  width: 3px;
+  margin: auto 0;
+  background: #A5939F;
+}
+
+.notes-unit a {
+  position: relative;
+  color: #029aa8;
+  transition: all 300ms;
+}
+
+.notes-unit a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #029aa8;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.notes-unit a:hover {
+  color: #fff;
+}
+
+.notes-unit a:hover::after {
+  height: 25px;
 }
 
 #contact-text {
